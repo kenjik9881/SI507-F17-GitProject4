@@ -16,6 +16,8 @@ if not client_secret or not client_key:
     print("You need to fill in client_key and client_secret. See comments in the code around line 8-14")
     exit()
 
+def add_caching():
+    print("This caching doesn't work")
 
 
 def get_tokens():
