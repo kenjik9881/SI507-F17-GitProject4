@@ -1,3 +1,5 @@
+# Nikhil's edits
+# Nikhil's comments
 # OAuth1 Code to access data from the Twitter API...
 import requests_oauthlib
 import webbrowser
@@ -20,7 +22,7 @@ def add_caching():
     print("This caching doesn't work")
 
 
-def get_tokens():
+def get_tokens(request_token_url, client_key, client_secret):
     ## Step 1. Obtain a request token which will identify you (the client) in the next step.
     # At this stage you will only need your client key and secret
 
@@ -31,7 +33,8 @@ def get_tokens():
     # after this line executes, oauth will now be an instance of the class OAuth1Session
     oauth = requests_oauthlib.OAuth1Session(client_key, client_secret=client_secret)
 
-    request_token_url = 'https://api.twitter.com/oauth/request_token'
+    request_token_url = request_token_url
+    #'https://api.twitter.com/oauth/request_token'
 
     # invoke the fetch_request_token method of the class OAuth1Session on our instance
     # it returns a dictionary that might look like this:
